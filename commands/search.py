@@ -2,7 +2,7 @@ import requests
 from utils import environment, json, results
 
 def fetch(args):
-    url = f"{environment.base_url()}/search/{args.type}?api_key={environment.api_key()}&query={args.query}"
+    url = f"{environment.base_url()}/search/{args.type}?api_key={environment.api_key()}&query={args.query}&page={args.page}"
     response = requests.get(url)
     
     if response.status_code == 200:
@@ -12,9 +12,10 @@ def fetch(args):
             print("No results found.")
             return
         
-        results.process(results_list, 10) # TODO: add dynamic result count
+        result_count = getattr(args, "count", 10)
+        results.process(results_list, result_count)
 
         if args.json:
             json.save(data, "search.json")
     else:
-        print("Failed to search.")
+        print(f"Failed to complete request with response code: {response.status_code}, {response.text}")

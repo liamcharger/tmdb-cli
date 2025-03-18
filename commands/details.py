@@ -2,12 +2,13 @@ import requests
 from utils import environment, json, imgcat
 
 def fetch(args):
-    url = f"{environment.base_url()}/{args.type}/{args.id}?api_key={environment.api_key()}"
+    url = f"{environment.base_url()}/{args.type}/{args.id}?api_key={environment.api_key()}&page={args.page}"
     response = requests.get(url)
     
     if response.status_code == 200:
         data = response.json()
         
+        # We don't use results.process because we want to customize what we show here
         title = data.get("title") or data.get("name")
         release_date = data.get("release_date") or data.get("first_air_date")
         overview = data.get("overview")
@@ -23,4 +24,4 @@ def fetch(args):
         if args.json:
             json.save(data, "details.json")
     else:
-        print("Failed to fetch details. Please make sure the media ID is correct and try again.")
+        print(f"Failed to complete request with response code: {response.status_code}, {response.text}")

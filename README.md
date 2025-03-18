@@ -58,8 +58,6 @@ This app supports five commands:
 - `details`: this method can be used to fetch additional information about a movie or TV show. [More](/docs/trending.md)
 - `find`: used to fetch movies/TV shows from other sources such as YouTube, IMDB, and more. (Not to be confused with `search`.) [More](/docs/trending.md)
 
-## TODO:
-- [ ] Finish in-code todos (obviously)
-- [ ] Add page and result flags
+## TODO
 - [ ] Complete docs
 - [ ] Add guest authentication to execute actions like submit ratings, etc.
