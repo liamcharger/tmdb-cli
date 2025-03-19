@@ -9,7 +9,7 @@ def fetch(args):
         data = response.json()
         results_list = data.get("results", [])
         if not results_list:
-            print("No results found.")
+            print("No results found")
             return
         
         result_count = getattr(args, "count", 10)

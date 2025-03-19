@@ -12,6 +12,9 @@ def fetch(args):
         title = data.get("title") or data.get("name")
         release_date = data.get("release_date") or data.get("first_air_date")
         overview = data.get("overview")
+        popularity = data.get("popularity")
+        vote_average = data.get("vote_average")
+        vote_count = data.get("vote_count")
         poster_path = data.get("poster_path")
 
         if poster_path:
@@ -20,6 +23,8 @@ def fetch(args):
         print(f"Title: {title}")
         print(f"Release Date: {release_date}")
         print(f"Overview: {overview}")
+        print(f"Popularity: {popularity}")
+        print(f"Vote Average: {vote_average} for {vote_count} votes")
 
         if args.json:
             json.save(data, "details.json")

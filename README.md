@@ -1,6 +1,6 @@
 # movie-lookup-cli
 
-`movie-lookup-cli` is a command-line tool that interacts with the TMDB API.
+`movie-lookup-cli` is a command-line tool that interacts with the TMDB API. It was originally designed to be useful while implementing API calls in another app or website and to debug responses, etc..
 
 ### Dependancies:
 - python-dotenv
@@ -52,12 +52,13 @@ And that's it! The app is ready to use.
 ### 2. Run the app!
 
 This app supports five commands:
-- `config`: used to set API key and region. [More](/docs/config.md)
-- `search`: used to find movies or TV shows based on the input. [More](/docs/trending.md)
-- `trending`: this method pulls shows currently trending movies or TV shows. [More](/docs/trending.md)
-- `details`: this method can be used to fetch additional information about a movie or TV show. [More](/docs/trending.md)
-- `find`: used to fetch movies/TV shows from other sources such as YouTube, IMDB, and more. (Not to be confused with `search`.) [More](/docs/trending.md)
+- `config`: used to set API key and region. [Read more](/docs/config.md)
+- `search`: used to find movies or TV shows based on the input. [Read more](/docs/search.md)
+- `trending`: this method pulls shows currently trending movies or TV shows. [Read more](/docs/trending.md)
+- `details`: this method can be used to fetch additional information about a movie or TV show. [Read more](/docs/details.md)
+- `find`: used to fetch movies/TV shows from other sources such as YouTube, IMDB, and more. (Not to be confused with `search`.) [Read more](/docs/find.md)
 
-## TODO
-- [ ] Complete docs
+## Roadmap/To-Do
+- [ ] Support actor API
+- [ ] Get genre details from ID
 - [ ] Add guest authentication to execute actions like submit ratings, etc.

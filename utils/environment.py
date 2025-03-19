@@ -21,3 +21,10 @@ def img_url():
         print("There is no API URL (for images) set. Please add it in your .env file")
         exit(1)
     return IMG_URL
+
+def region():
+    REGION = os.getenv("REGION")
+    if not REGION:
+        print("There is no region set. Please add it in your .env file")
+        exit(1)
+    return REGION

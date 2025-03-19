@@ -31,12 +31,12 @@ def fetch(args):
         )
 
         if not results_list:
-            print("No matching results found.")
+            print("No matching results found")
             return
         
         result_count = getattr(args, "count", 10)
         results.process(results_list, result_count)
-        
+
         if args.json:
             json.save(data, "find.json")
     else:
