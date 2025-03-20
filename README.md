@@ -1,6 +1,6 @@
-# movie-lookup-cli
+# tmdb-cli
 
-`movie-lookup-cli` is a command-line tool that interacts with the TMDB API. It was originally designed to be useful while implementing API calls in another app or website and to debug responses, etc..
+`tmdb-cli` is a command-line tool that interacts with the TMDB API. It was originally designed to be useful while implementing API calls in another app or website and to debug responses, etc..
 
 ### Dependancies:
 - python-dotenv
